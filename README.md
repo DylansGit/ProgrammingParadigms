@@ -1,54 +1,87 @@
-# React + TypeScript + Vite
+# Programming Paradigms Interactive Map 🧠💻
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a visual, interactive reference for exploring programming languages and their associated paradigms. Designed to be both educational and aesthetic, it helps developers, students, and enthusiasts understand how different languages relate to major programming paradigms like Functional, Object-Oriented, Declarative, Logic-based, Procedural, and more.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 🧩 **Interactive language cards** with paradigm badges
+- 🧭 **Hover tooltips** showing language details and paradigm descriptions
+- 🌀 **Animated UI** using Framer Motion
+- 🖼️ **Modern grid layout** with Tailwind CSS
+- 📚 **Expandable structure** for adding new languages or paradigms
+- 🌐 **Deployable to GitHub Pages**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🧱 Tech Stack
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Frontend**: [React](https://reactjs.org/) with [Vite](https://vitejs.dev/)
+- **Language**: TypeScript (`.tsx`)
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Hosting**: GitHub Pages (optional)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+git clone https://github.com/your-username/programming-paradigms.git
+cd programming-paradigms
+2. Install dependencies
+
+npm install
+3. Run the development server
+
+npm run dev
+App will be live at http://localhost:5173
+
+🗂️ Folder Structure
+
+/src
+  /components
+    Table.tsx         → Renders the interactive language grid
+    LanguageCard.tsx  → Displays each language with paradigms
+    Tooltip.tsx       → Shows hover-based popups
+  /data
+    languages.ts      → Core language & paradigm mapping data
+  /styles
+    index.css         → Tailwind styles
+main.tsx              → React entry point
+App.tsx               → Root component
+🌍 Deployment (GitHub Pages)
+To deploy this project to GitHub Pages:
+
+1. Update vite.config.ts
+
+export default defineConfig({
+  base: "/programming-paradigms/", // your repo name
+  ...
+});
+2. Build and push
+
+npm run build
+npm run deploy
+You can use vite-plugin-gh-pages or manually push the dist/ folder to a gh-pages branch.
+
+🧠 Future Ideas
+Group by paradigm (not just by language)
+
+Add historical timelines
+
+Search & filter bar
+
+Drag-and-zoom visualization
+
+Paradigm-focused detail popups
+
+📄 License
+MIT License.
+Use freely for education and fun. Contributions welcome.
+
+🙌 Built by Dylan Singer
+Passionate about programming, education, and clean UI.
+Let me know if you learned something — or spotted a mistake!
